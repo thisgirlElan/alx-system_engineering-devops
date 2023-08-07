@@ -1,0 +1,2 @@
+#!/bin/bash
+awk '{hosts[$1]++} END {for (host in hosts) {print host}}' input.tsv | sort | uniq -c | sort -nr | head -n 11
